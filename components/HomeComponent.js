@@ -17,7 +17,7 @@ function RenderItem({ item }) {
                     {item.description}
                 </Text>
             </Card>
-        )
+        );
     }
 
     return <View />;
