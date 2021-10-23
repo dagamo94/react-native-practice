@@ -162,7 +162,6 @@ class RegisterTab extends Component {
       if (!capturedImage.cancelled) {
         console.log(capturedImage);
         this.processImage(capturedImage.uri);
-        MediaLibrary.saveToLibraryAsync(capturedImage.uri);
       }
     }
   }
@@ -187,6 +186,8 @@ class RegisterTab extends Component {
     console.log(processedImage);
 
     this.setState({ imageUrl: processedImage.uri });
+    MediaLibrary.saveToLibraryAsync(imgUri);
+
   }
 
   getImageFromGallery = async () => {
